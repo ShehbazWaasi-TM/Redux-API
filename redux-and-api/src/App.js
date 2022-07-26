@@ -1,6 +1,7 @@
 import './App.css';
 import {React, useState} from "react";
 import Fetchapi from './components/Fetchapi';
+import Usecontext from './components/Usecontext';
 
 function App() {
   const [count,setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
       <button onClick={()=>setCount(count-1)}>Decrement</button>
       <button onClick={()=>setCount(0)}>Reset</button>
       <Fetchapi/>
+      <Usecontext/>
     </div>
   );
 }

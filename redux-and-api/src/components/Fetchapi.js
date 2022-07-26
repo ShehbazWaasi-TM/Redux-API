@@ -11,9 +11,11 @@ const Fetchapi = () => {
       console.log(res)
       setContacts(res)    
     }
+    
   useEffect(()=>{
     Data()
   },[])
+
   return (
     <div>
       <table border="1px">
