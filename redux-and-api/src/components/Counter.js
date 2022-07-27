@@ -2,14 +2,17 @@ import {React,useContext} from 'react'
 import {userContext} from "./Usecontext"
 
 const Counter = () => {
-    const trackCount = useContext(userContext)
-    console.log(trackCount)
-    console.log(trackCount.state)
+    const {state,dispatch} = useContext(userContext)
+    // console.log("trackcount" ,trackCount)
+    console.log(state)
+  
   return (
     <div>
-        <h1>{trackCount.state}</h1>
-        <button>increment</button>
-        <button>decrement</button>
+        <p>using UseContext and UseReducer</p>
+        <h1>{state}</h1>
+        <button  onClick={()=>dispatch({type : "INCREMENT"})}>increment</button>
+        <button  onClick={()=>dispatch({type : "DECREMENT"})}>Decrement</button>
+        <button  onClick={()=>dispatch({type : "RESET"})}>Reset</button>
     </div>
   )
 }
