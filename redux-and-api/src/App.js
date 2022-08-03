@@ -3,6 +3,8 @@ import {React, useState} from "react";
 import Fetchapi from './components/Fetchapi';
 import Usecontext from './components/Usecontext';
 import Counter from './components/Counter';
+import Todo from './components/Todo';
+import Todoredux from './components/Todoredux';
 
 function App() {
   const [count,setCount] = useState(0)
@@ -15,6 +17,8 @@ function App() {
       <button onClick={()=>setCount(0)}>Reset</button>
       <Fetchapi/>
       <Usecontext><Counter/></Usecontext>
+      <Todo/>
+      <Todoredux/>
     </div>
   );
 }
